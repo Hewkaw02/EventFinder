@@ -14,19 +14,32 @@
 
 
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="60dp"
-            android:layout_height="60dp"/>
+            android:layout_height="60dp"
+            android:onClick="Refresh"/>
 
-        <MultiAutoCompleteTextView
+        <EditText
             android:id="@+id/multiAutoCompleteTextView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="S"/>
+            android:hint=""/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find"
+            android:onClick="Find"/>
+
 
         <ImageView
+            android:id="@+id/Filter"
             android:layout_width="60dp"
             android:layout_height="60dp"/>
+
+
 
     </LinearLayout>
 
@@ -41,20 +54,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Create"/>
+            android:text="Create"
+            android:onClick="Create"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Find"/>
+
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_recycler_view"/>
+        app:defaultNavHost="true"
+        />
 
 </LinearLayout>

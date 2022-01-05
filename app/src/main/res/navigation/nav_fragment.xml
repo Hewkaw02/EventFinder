@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/MainFragment">
+
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.tni.phitchaya.eventfinder.MainFragment"
+        tools:layout="@layout/fragment_main2">
+        <action
+            android:id="@+id/action_MainFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.tni.phitchaya.eventfinder.DetailFragment"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="key_restaurant_id"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

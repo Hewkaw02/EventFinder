@@ -1,8 +1,8 @@
 package com.tni.phitchaya.eventfinder.util;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.BuildConfig;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.example.fireeats.BuildConfig;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class FirebaseUtil {

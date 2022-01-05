@@ -1,4 +1,4 @@
-package com.tni.phitchaya.eventfinder.util;
-
-public class EventUtil {
-}
+//package com.tni.phitchaya.eventfinder.util;
+//
+//public class EventUtil {
+//}

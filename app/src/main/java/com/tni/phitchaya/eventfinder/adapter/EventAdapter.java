@@ -66,7 +66,7 @@ public class EventAdapter extends FirestoreAdapter<EventAdapter.ViewHolder>{
         // set deteil
         public void bind(final DocumentSnapshot snapshot, final OnEventSelectedListener listener){
 
-            Event1 event = snapshot.toObject(Event1.class);
+//            Event1 event = snapshot.toObject(Event1.class);
             Resources resources = itemView.getResources();
 
 

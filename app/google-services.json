@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1078043901528",
+    "firebase_url": "https://test-pro-firebase.firebaseio.com",
+    "project_id": "test-pro-firebase",
+    "storage_bucket": "test-pro-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078043901528:android:7850e79a93eb65df20142d",
+        "android_client_info": {
+          "package_name": "com.tni.phitchaya.eventfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078043901528-ij4b5iipbnofjofdoo63aqnvrdooa1ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuimUxVp-pY81MSEysZpevaV7TlRla33o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078043901528-ij4b5iipbnofjofdoo63aqnvrdooa1ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
