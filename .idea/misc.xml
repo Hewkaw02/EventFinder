@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/activity_generate_event.xml" value="0.5541666666666667" />
+        <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/activity_generate_event.xml" value="0.5" />
         <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/activity_login.xml" value="0.5541666666666667" />
-        <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/dialog_filter.xml" value="0.24722222222222223" />
         <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/dialog_fitter.xml" value="0.5541666666666667" />
         <entry key="..\:/App Clone/EventFinder/app/src/main/res/layout/dialog_recycler_view.xml" value="0.5541666666666667" />

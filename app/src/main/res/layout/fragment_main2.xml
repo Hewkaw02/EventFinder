@@ -16,4 +16,26 @@
         tools:listitem="@layout/item_recycler_view"
         android:visibility="visible" />
 
+    <LinearLayout
+        android:id="@+id/view_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ไม่มีข้อมูลเลยง่าาาาา" />
+
+    </LinearLayout>
+
 </FrameLayout>

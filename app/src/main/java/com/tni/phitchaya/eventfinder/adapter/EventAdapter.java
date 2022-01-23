@@ -1,9 +1,11 @@
 package com.tni.phitchaya.eventfinder.adapter;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,9 +16,11 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.tni.phitchaya.eventfinder.R;
-import com.tni.phitchaya.eventfinder.model.Event1;
+import com.tni.phitchaya.eventfinder.model.Event;
 
 public class EventAdapter extends FirestoreAdapter<EventAdapter.ViewHolder>{
+
+    public Context context2;
 
     @Override
     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -29,9 +33,26 @@ public class EventAdapter extends FirestoreAdapter<EventAdapter.ViewHolder>{
 
     private OnEventSelectedListener mListener;
 
-    public EventAdapter(Query query, OnEventSelectedListener listener) {
+//    public Load_Event(String name,String provide , String location , String startTime, String endTime,
+//                 String startdate,/*String enddate,*/
+//                 String category , String img , String detail, int popularity){
+//        this.name = name;
+//        this.provide = provide;
+//        this.location = location;
+//        this.startTime = startTime;
+//        this.endTime = endTime ;
+//        this.startdate = startdate;
+////        this.enddate = enddate;
+//        this.category = category;
+//        this.img = img;
+//        this.detail = detail;
+//        this.popularity = popularity;
+//    }
+
+    public EventAdapter(Query query, /*OnEventSelectedListener listener*/ Context context) {
         super(query);
-        mListener = listener;
+        this.context2 = context;
+//        mListener = listener;
     }
 
     @NonNull
@@ -46,6 +67,7 @@ public class EventAdapter extends FirestoreAdapter<EventAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bind(getSnapshot(position), mListener);
+
     }
 
     @Override
@@ -56,22 +78,29 @@ public class EventAdapter extends FirestoreAdapter<EventAdapter.ViewHolder>{
 
     static class ViewHolder extends RecyclerView.ViewHolder{
 
+        TextView nameView;
+        TextView localView;
+        TextView poView;
+
         private View binding;
         // view iteme in interface
         public ViewHolder(View itemView){
             super(itemView);
+            nameView = itemView.findViewById(R.id.EventTitleItem);
+            localView = itemView.findViewById(R.id.EventLocalItem);
+            poView = itemView.findViewById(R.id.EventNumberItem);
             this.binding = itemView;
         }
 
         // set deteil
         public void bind(final DocumentSnapshot snapshot, final OnEventSelectedListener listener){
 
-//            Event1 event = snapshot.toObject(Event1.class);
-            Resources resources = itemView.getResources();
+            Event event = snapshot.toObject(Event.class);
+//            Resources resources = itemView.getResources();
 
 
-//            binding.EventTitleItem.setName
-//            binding.EventNumberItem.setpo
+            nameView.setText(event.getName());
+            localView.setText(event.getLocation());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
